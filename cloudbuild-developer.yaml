@@ -23,7 +23,7 @@ steps:
 
 # Step 4
   - name: 'gcr.io/cloud-builders/kubectl'
-    args: ['apply', '-f', 'k8s/']
+    args: ['apply', '-f', 'k8s/developer']
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-a'
     - 'CLOUDSDK_CONTAINER_CLUSTER=gke-my-app-vue'

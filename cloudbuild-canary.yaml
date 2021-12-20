@@ -1,44 +1,45 @@
 steps:
-# Step 1: Build
-  - name: 'gcr.io/cloud-builders/docker'
+# Step 1
+  - name: 'asia.gcr.io/cloud-builders/docker'
     entrypoint: 'bash'
     args: 
       - '-c'
       - |
-          docker build -t gcr.io/$PROJECT_ID/my-app-vue-canary:latest .
-#  Step 2: Publish
-  - name: 'gcr.io/cloud-builders/docker'
+          docker build -t asia.gcr.io/$PROJECT_ID/my-app-vue-canary:latest .
+#  Step 2
+  - name: 'asia.gcr.io/cloud-builders/docker'
     entrypoint: 'bash'
     args: 
       - '-c'
       - |
-          docker push gcr.io/$PROJECT_ID/my-app-vue-canary:latest
+          docker push asia.gcr.io/$PROJECT_ID/my-app-vue-canary:latest
 # Step 3
-  - name: 'gcr.io/cloud-builders/docker' 
+  - name: 'asia.gcr.io/cloud-builders/docker' 
     entrypoint: 'bash'
     args: [
     '-c', 
-    'docker pull gcr.io/$PROJECT_ID/my-app-vue-canary:latest || exit 0'
+    'docker pull asia.gcr.io/$PROJECT_ID/my-app-vue-canary:latest || exit 0'
     ]
+
 # Step 4
-  - name: 'gcr.io/cloud-builders/kubectl'
-    args: ['apply', '-f', 'k8s/canary/']
+  - name: 'asia.gcr.io/cloud-builders/kubectl'
+    args: ['apply', '-f', 'k8s/canary']
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-a'
     - 'CLOUDSDK_CONTAINER_CLUSTER=gke-my-app-vue'
 # Step 5
-  - name: 'gcr.io/cloud-builders/kubectl'
+  - name: 'asia.gcr.io/cloud-builders/kubectl'
     args: [
     'set', 
     'image', 
     'deployment', 
     'my-app-vue-canary', 
-    'my-app-vue-canary=gcr.io/$PROJECT_ID/my-app-vue-canary:latest'
+    'my-app-vue-canary=asia.gcr.io/$PROJECT_ID/my-app-vue-canary:latest'
     ]
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-a'
     - 'CLOUDSDK_CONTAINER_CLUSTER=gke-my-app-vue'
     # Push the image to Google Container Registry with the latest tag
 images: [
-   'gcr.io/$PROJECT_ID/my-app-vue-canary:latest'
+   'asia.gcr.io/$PROJECT_ID/my-app-vue-canary:latest'
   ]

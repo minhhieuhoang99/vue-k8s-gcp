@@ -1,20 +1,13 @@
-# Get a base Node image
-FROM node:alpine
-
-# Make the 'app' folder the current working directory
+# build stage
+FROM node:lts-alpine as build-stage
 WORKDIR /app
-
-# Copy both 'package.json' and 'package-lock.json' (if present)
 COPY package*.json ./
-
-# Install project dependencies
 RUN npm install
-
-# Copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
-
-# Build app for production with minification
 RUN npm run build
 
-# Runs the website on http://localhost:8080
-CMD ["npm", "run", "serve"]
+# production stage
+FROM nginx:stable-alpine as production-stage
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+EXPOSE 8080
+CMD ["nginx", "-g", "daemon off;"]

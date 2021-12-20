@@ -1,15 +1,13 @@
 steps:
 # Step 1: Build
-  - id: 'build'
-    name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker'
     entrypoint: 'bash'
     args: 
       - '-c'
       - |
           docker build -t gcr.io/$PROJECT_ID/my-app-vue-dev:latest .
 #  Step 2: Publish
-  - id: 'publish'
-    name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker'
     entrypoint: 'bash'
     args: 
       - '-c'

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: my-app-vue-canary
+  name: my-app-vue-canary
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: my-app-vue-canary
+  template:
+    metadata:
+      labels:
+        run: my-app-vue-canary
+    spec:
+      containers:
+      - image: gcr.io/ci-cd-gcp-k8s/my-app-vue-dev:latest
+        name: my-app-vue-canary
+        ports:
+        - containerPort: 8080

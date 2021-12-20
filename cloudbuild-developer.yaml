@@ -1,12 +1,28 @@
 steps:
-# Step 1
+# Step 1: Build
+  - id: 'build'
+    name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args: 
+      - '-c'
+      - |
+          docker build -t gcr.io/$PROJECT_ID/my-app-vue-dev:latest .
+#  Step 2: Publish
+  - id: 'publish'
+    name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args: 
+      - '-c'
+      - |
+          docker push gcr.io/$PROJECT_ID/my-app-vue-dev:latest
+# Step 3
 - name: 'gcr.io/cloud-builders/docker' 
   entrypoint: 'bash'
   args: [
    '-c', 
    'docker pull gcr.io/$PROJECT_ID/my-app-vue-dev:latest || exit 0'
   ]
-# Step 2
+# Step 4
 - name: gcr.io/cloud-builders/docker
   args: [
    'build', 
@@ -15,13 +31,13 @@ steps:
    '.'
   ]
   dir: 'my-app-vue-dev'
-# Step 3
+# Step 5
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['apply', '-f', 'k8s/']
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=gke-my-app-vue'
-# Step 4
+# Step 6
 - name: 'gcr.io/cloud-builders/kubectl'
   args: [
    'set', 

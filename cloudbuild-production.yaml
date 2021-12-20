@@ -34,13 +34,6 @@ steps:
     'deployment', 
     'my-app-vue-prod', 
     'my-app-vue-prod=gcr.io/$PROJECT_ID/my-app-vue-prod:latest'
-    'CLUSTER=$$(gcloud config get-value container/cluster)'
-    'PROJECT=$$(gcloud config get-value core/project)'
-    'ZONE=$$(gcloud config get-value compute/zone)'
-    
-    'gcloud container clusters get-credentials "$${CLUSTER}" \
-      --project "$${PROJECT}" \
-      --zone "$${ZONE}" ' 
     ]
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-a'

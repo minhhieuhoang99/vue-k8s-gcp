@@ -1,0 +1,63 @@
+lang: en
+
+name:
+  first: Hieu
+  last: Hoang Minh
+
+position: Software Engineer
+
+contacts:
+  phone: +84 327794699
+  email: minhhieuhoang99@gmail.com
+  linkedIn: ===========
+  website: http://mango.viecrew.com
+  address: 122/11 Vinh Tuy Hai Ba Trung Ha Noi
+profile: Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque fugit suscipit, quidem velit, laboriosam mollitia ducimus animi maxime, libero perspiciatis architecto. Sint magnam numquam tenetur temporibus ab cum omnis ipsum!
+
+skills:
+- "Language: English"
+- "Programming Skills: HTML, CSS, Python, JavaScript, ASP.Net Core,ASP.Net API, SQL, C#, ReactJS, Angular, Google Cloud Platform, Word Press, Hosting server, EFCore, Git, Unit Testing"
+- "Photo and Video Editing Skills: adobe premiere , adobe photoshop , adobe illustrator , adobe lightroom , ...."
+- "Soft Skills: Communication and presentations, Analytical thinking and problem solving skills, Work planning and reporting skills"
+
+experience:
+- workPosition: Software Engineer
+  workPeriod: NOV 2021 - PRESENT
+  companyName: Branch of Harvey Nash (Vietnam) Co.Ltd
+  description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum omnis iste non soluta, fugit sequi doloribus eos nesciunt distinctio nihil ea labore dolorum? Obcaecati ipsa dolorem consequatur, sapiente illo ut?
+
+- workPosition: Probationary staff
+  workPeriod: SEP 2021 - NOV 2021
+  companyName: Branch of Harvey Nash (Vietnam) Co.Ltd
+  description: Research design pattern (Strategy observer, singelton, decorator, builder, factory menthod, command, Adapter, prototype, campositetacade, iterator, ...). intended use, what problems to solve decided from the design pattern, UML andsome basic examples, I can implement the basics - Take the basic azure course, self-study azure course 900 - Self-study angular 12 fundamental - Join the DevOps company transformation course, self-study and implement ReactJs GitOps CICD on Google Cloud Platform
+
+- workPosition: Interns
+  workPeriod: AUG 2021 - SEP 2021
+  companyName: Branch of Harvey Nash (Vietnam) Co.Ltd
+  description: Company Asset Management Website - Building and implementing projects on the company's complete asset management website including QC, BA, PO, PM, DEV with functions such as managing employees to register to borrow assets, manage lists company assets, manage the portfolio of assets registered to borrow in combination with an authentication system using JSON Web Token - Technology used in C# ASP.NET API project with ReactJS UI combined with frame design. Projects deployed on Azure have written unit tests performed to ensure project correctness
+
+- workPosition: Interns
+  workPeriod: JUL 2021 - AUG 2021
+  companyName: Branch of Harvey Nash (Vietnam) Co.Ltd
+  description: Company's Library Management Website - Building and implementing projects on the company's library management website with basic functions such as managing staff to borrow books, managing books, managing borrowed books list - Technology used in the project C# ASP.NET API with ReactJS UI combined with the design of the ant framework. The project has implementation of writing unit tests to ensure the accuracy of the project
+
+- workPosition: Interns
+  workPeriod: JUN 2021 - JUL 2021
+  companyName: Branch of Harvey Nash (Vietnam) Co.Ltd
+  description: Learn and receive intensive training in C# ASP.Net Core ASP.NET and ReactJS object-oriented programming Achievements and skills gained - Being positively evaluated by the instructor dynamic, well-adapted... - Observe, learn and grasp well the structure and implementation of the project. - Improve communication and presentation skills in English during project implementation. - Improve soft skills
+
+- workPosition: CMS system administrator staff
+  workPeriod: FEB 2019 - FEB 2021
+  companyName: DH Viet Investment and Trade Co.Ltd
+  description: Main responsibility - Write and post product advertisements through the company's website - Update and modify product database- Update and customize the website's interface based on HTML CSS and JS
+
+education:
+- degreeTitle: Student
+  institutionName: Thuy Loi University
+  studyDirection: Major Information Technology
+
+- degreeTitle: Student
+  institutionName: Tran Phu - Hoan Kiem High School
+  studyDirection: Study direction
+
+

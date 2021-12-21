@@ -1,6 +1,6 @@
 steps:
 # Step 0
-- name: 'gcr.io/cloud-builders/npm'
+  - name: 'gcr.io/cloud-builders/npm'
     args:  ['run', 'test:unit']
 # Step 1
   - name: 'gcr.io/cloud-builders/docker'

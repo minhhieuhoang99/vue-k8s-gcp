@@ -9,6 +9,8 @@ COPY package*.json ./
 RUN npm install
 # copy files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
+# run unit tests
+RUN npm run test:unit
 # build app for production with minification
 RUN npm run build
 EXPOSE 8080

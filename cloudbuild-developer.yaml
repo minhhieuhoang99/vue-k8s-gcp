@@ -6,14 +6,6 @@ steps:
       - '-c'
       - |
           docker build -t gcr.io/$PROJECT_ID/my-app-vue-dev:latest .
-# Step 
-  - name: 'gcr.io/cloud-builders/npm'
-    entrypoint: 'bash'
-    args: 
-      - '-c'
-      - |
-          run test:unit 
-
 #  Step 2
   - name: 'gcr.io/cloud-builders/docker'
     entrypoint: 'bash'

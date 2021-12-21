@@ -1,28 +1,63 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="a4">
+    <Resume />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Resume from "./components/Resume";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Resume,
+  },
+};
 </script>
 
 <style>
+@import '~@/assets/styles/fonts.css';
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+button {
+  font-family: "Raleway", sans-serif !important;
+}
+
+body {
+  margin: 0;
+  background: rgb(204, 204, 204);
+}
+
+.a4 {
+  background: #e4e4e6;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  width: 21cm;
+  min-height: 29.7cm;
+}
+
+@media (max-width: 21cm) {
+  .a4 {
+    width: auto !important;
+    min-height: auto !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    margin-top: 0;
+  }
+}
+
+@media print {
+  .a4 {
+    margin: 0;
+    width: 25cm !important;
+  }
 }
 </style>

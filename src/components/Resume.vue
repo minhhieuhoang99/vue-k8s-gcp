@@ -1,4 +1,5 @@
 <template>
+  <h1>{{ msg }}</h1>
   <div class="wrapper">
     <div class="header">
       <Header />
@@ -34,12 +35,19 @@ import Education from "@/components/Education.vue";
 
 export default {
   name: "Resume",
-
+  props: {
+    msg: String
+  },
   components: { Contacts, Profile, Header, Skills, Experience, Education },
 };
 </script>
 
 <style scoped>
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr;

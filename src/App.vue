@@ -1,63 +1,29 @@
 <template>
-  <div class="a4">
-    <Resume />
+  <div id="nav">
+    <router-link to="/">About</router-link> |
+    <router-link to="/home">Home</router-link>
   </div>
+  <router-view/>
 </template>
 
-<script>
-import Resume from "./components/Resume";
-
-export default {
-  name: "App",
-  components: {
-    Resume,
-  },
-};
-</script>
-
 <style>
-@import '~@/assets/styles/fonts.css';
-
 #app {
-  box-sizing: border-box;
-  font-family: "Raleway", sans-serif !important;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
 }
 
-button {
-  font-family: "Raleway", sans-serif !important;
+#nav {
+  padding: 30px;
 }
 
-body {
-  margin: 0;
-  background: rgb(204, 204, 204);
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
 }
 
-.a4 {
-  background: #e4e4e6;
-  display: block;
-  margin: 0 auto;
-  margin-top: 0.5cm;
-  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
-  width: 21cm;
-  min-height: 29.7cm;
-}
-
-@media (max-width: 21cm) {
-  .a4 {
-    width: auto !important;
-    min-height: auto !important;
-    box-shadow: none !important;
-    margin: 0 !important;
-    margin-top: 0;
-  }
-}
-
-@media print {
-  .a4 {
-    margin: 0;
-    width: 25cm !important;
-  }
+#nav a.router-link-exact-active {
+  color: #E49F3C;
 }
 </style>

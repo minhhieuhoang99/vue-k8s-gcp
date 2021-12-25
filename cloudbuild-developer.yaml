@@ -25,6 +25,6 @@ steps:
     - 'CLOUDSDK_CONTAINER_CLUSTER=gke-my-app-vue'
     # Push the image to Google Container Registry with the ${SHORT_SHA} tag
 images: [
-  'gcr.io/$PROJECT_ID/my-app-vue-dev:$SHORT_SHA'
+  'gcr.io/$PROJECT_ID/my-app-vue-dev:$SHORT_SHA',
   'gcr.io/$PROJECT_ID/my-app-vue-dev:latest'
   ]

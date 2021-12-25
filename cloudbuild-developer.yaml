@@ -26,6 +26,7 @@ steps:
     'set', 
     'image', 
     'deployment', 
+    'my-app-vue-dev', 
     'gcr.io/$PROJECT_ID/my-app-vue-dev:latest'
     ]
     env:

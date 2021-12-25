@@ -7,6 +7,6 @@ spec:
     run: my-app-vue-dev
   ports:
     - protocol: TCP
-      port: 80
+      port: 81
       targetPort: 8080
   type: LoadBalancer

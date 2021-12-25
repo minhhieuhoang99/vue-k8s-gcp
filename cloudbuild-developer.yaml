@@ -5,14 +5,14 @@ steps:
     args: 
       - '-c'
       - |
-          docker build -t gcr.io/$PROJECT_ID/my-app-vue-dev:latest .
+          docker build -t gcr.io/$PROJECT_ID/my-app-vue-dev:${SHORT_SHA} .
 #  Step 2
   - name: 'gcr.io/cloud-builders/docker'
     entrypoint: 'bash'
     args: 
       - '-c'
       - |
-          docker push gcr.io/$PROJECT_ID/my-app-vue-dev:latest
+          docker push gcr.io/$PROJECT_ID/my-app-vue-dev:${SHORT_SHA}
 
 # Step 4
   - name: 'gcr.io/cloud-builders/kubectl'
@@ -27,12 +27,12 @@ steps:
     'image', 
     'deployment', 
     'my-app-vue-dev', 
-    'my-app-vue-dev=gcr.io/$PROJECT_ID/my-app-vue-dev:latest'
+    'my-app-vue-dev=gcr.io/$PROJECT_ID/my-app-vue-dev:${SHORT_SHA}'
     ]
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-a'
     - 'CLOUDSDK_CONTAINER_CLUSTER=gke-my-app-vue'
-    # Push the image to Google Container Registry with the latest tag
-# images: [
-#    'gcr.io/$PROJECT_ID/my-app-vue-dev:latest'
-#   ]
+    # Push the image to Google Container Registry with the ${SHORT_SHA} tag
+images: [
+   'gcr.io/$PROJECT_ID/my-app-vue-dev:latest'
+  ]

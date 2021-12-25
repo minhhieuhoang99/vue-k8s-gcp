@@ -1,6 +1,6 @@
 <template>
   <div class="a4">
-    <Resume msg="Curriculum vitae" />
+    <Resume msg="CV" />
   </div>
 </template>
 

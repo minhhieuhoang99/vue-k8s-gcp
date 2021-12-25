@@ -5,7 +5,7 @@ metadata:
     run: my-app-vue-canary
   name: my-app-vue-canary
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       run: my-app-vue-canary

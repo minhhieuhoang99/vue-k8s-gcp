@@ -5,7 +5,7 @@ metadata:
     run: my-app-vue-dev
   name: my-app-vue-dev
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       run: my-app-vue-dev

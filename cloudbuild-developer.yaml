@@ -13,6 +13,7 @@ steps:
       - '-c'
       - |
           docker push gcr.io/$PROJECT_ID/my-app-vue-dev:latest
+
 # Step 5
   - name: 'gcr.io/cloud-builders/kubectl'
     args: [
@@ -20,7 +21,7 @@ steps:
     'image', 
     'deployment', 
     'my-app-vue-dev', 
-    'gcr.io/$PROJECT_ID/my-app-vue-dev:latest'
+    'my-app-vue-dev=gcr.io/$PROJECT_ID/my-app-vue-dev:latest'
     ]
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-a'

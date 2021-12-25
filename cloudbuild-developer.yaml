@@ -14,17 +14,12 @@ steps:
       - |
           docker push gcr.io/$PROJECT_ID/my-app-vue-dev:latest
 
-
-    # Push the image to Google Container Registry with the latest tag
 # Step 4
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['apply', '-f', 'kubernetes/developer']
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-a'
     - 'CLOUDSDK_CONTAINER_CLUSTER=gke-my-app-vue'
-  images: [
-    'gcr.io/$PROJECT_ID/my-app-vue-dev:latest'
-    ]
 # Step 5
   - name: 'gcr.io/cloud-builders/kubectl'
     args: [
@@ -37,3 +32,7 @@ steps:
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-a'
     - 'CLOUDSDK_CONTAINER_CLUSTER=gke-my-app-vue'
+    # Push the image to Google Container Registry with the latest tag
+images: [
+   'gcr.io/$PROJECT_ID/my-app-vue-dev:latest'
+  ]

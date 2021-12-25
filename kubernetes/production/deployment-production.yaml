@@ -15,7 +15,7 @@ spec:
         run: my-app-vue-prod
     spec:
       containers:
-      - image: gcr.io/ci-cd-gcp-k8s/my-app-vue-prod:latest 
-        name: my-app-vue-prod
-        ports:
-        - containerPort: 8080
+        - image: gcr.io/ci-cd-gcp-k8s/my-app-vue-prod:latest
+          name: my-app-vue-prod
+          ports:
+            - containerPort: 8080

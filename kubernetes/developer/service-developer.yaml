@@ -4,9 +4,9 @@ metadata:
   name: my-app-vue-dev
 spec:
   selector:
-     run: my-app-vue-dev
+    run: my-app-vue-dev
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
   type: LoadBalancer

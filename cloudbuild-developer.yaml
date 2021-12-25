@@ -23,7 +23,7 @@ steps:
     'image', 
     'deployment', 
     'my-app-vue-dev', 
-    'my-app-vue-dev=gcr.io/$PROJECT_ID/my-app-vue-dev:${SHORT_SHA}'
+    'my-app-vue-dev=gcr.io/$PROJECT_ID/my-app-vue-dev:latest'
     ]
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=asia-east1-a'

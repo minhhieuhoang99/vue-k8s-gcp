@@ -1,6 +1,6 @@
 <template>
   <div class="a4">
-    <Resume msg="Ci Vi" />
+    <Resume msg="Ci Vi hieu" />
   </div>
 </template>
 

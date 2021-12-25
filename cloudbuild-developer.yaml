@@ -31,5 +31,4 @@ steps:
     # Push the image to Google Container Registry with the latest tag
 images: [
    'gcr.io/$PROJECT_ID/my-app-vue-dev:latest',
-   'gcr.io/$PROJECT_ID/my-app-vue-dev:${SHORT_SHA}'
   ]

@@ -7,7 +7,7 @@
       <SubTitle class="person-info-position" :text="position" />
     </div>
     <div class="person-photo">
-      <img class="person-photo-image" src="~@/assets/photo.png" />
+      <img class="person-photo-image" src="~@/assets/photo2.jpg" />
     </div>
   </div>
 </template>

@@ -10,16 +10,16 @@ steps:
       - |
           docker push gcr.io/$PROJECT_ID/my-app-vue-dev:${SHORT_SHA}
 
-#  Step 2
-  # - name: 'gcr.io/cloud-builders/docker'
-  #   entrypoint: 'bash'
-  #   args: 
-  #     - '-c'
-  #     - |
-  #         docker push gcr.io/$PROJECT_ID/my-app-vue-dev:latest
-    # Push the image to Google Container Registry with the latest tag
-  - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/$PROJECT_ID/my-app-vue-dev:latest"]
+ Step 2
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args: 
+      - '-c'
+      - |
+          docker push gcr.io/$PROJECT_ID/my-app-vue-dev:latest
+    Push the image to Google Container Registry with the latest tag
+  # - name: "gcr.io/cloud-builders/docker"
+  #   args: ["push", "gcr.io/$PROJECT_ID/my-app-vue-dev:latest"]
     # deploy container image to GKE
   - name: "gcr.io/cloud-builders/gke-deploy"
     args:

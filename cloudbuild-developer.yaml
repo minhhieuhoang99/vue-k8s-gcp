@@ -10,7 +10,7 @@ steps:
       - |
           docker push gcr.io/$PROJECT_ID/my-app-vue-dev:${SHORT_SHA}
 
- Step 2
+
   - name: 'gcr.io/cloud-builders/docker'
     entrypoint: 'bash'
     args: 

@@ -15,7 +15,7 @@ spec:
         run: my-app-vue-canary
     spec:
       containers:
-        - image: gcr.io/ci-cd-gcp-k8s/my-app-vue-dev:latest
+        - image: gcr.io/ci-cd-gcp-k8s/my-app-vue-canary:latest
           name: my-app-vue-canary
           ports:
             - containerPort: 8080
